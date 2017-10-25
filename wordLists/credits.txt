@@ -1,2 +1,4 @@
 word lists from Ashley Bovan
 http://www.ashley-bovan.co.uk/words/wordlists.html
+firstnames.txt
+https://github.com/dominictarr/random-name/blob/master/first-names.txt

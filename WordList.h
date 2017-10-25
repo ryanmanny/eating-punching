@@ -34,7 +34,7 @@ public:
 	}
 
 	//returns a random word from the list using r random engine
-	string operator() (default_random_engine r)
+	string operator() (default_random_engine & r) //pass by reference to stop the problem where duplicate words come up
 	{
 		string s;
 		s = words.at(distribution(r));

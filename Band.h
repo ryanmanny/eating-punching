@@ -18,6 +18,7 @@ public:
 		nouns = WordList(nounFile);
 		verbs = WordList(verbFile);
 		adjectives = WordList(adjectiveFile);
+		names = WordList(nameFile);
 	}
 
 	string gen(void)
@@ -31,10 +32,37 @@ public:
 		{
 			case 1: //Talking Heads
 				s = verbs(rand) + " " + nouns(rand);
-			break;
-			case 2: //king crimson
+				break;
+			case 2: //King Crimson
 				s = nouns(rand) + " " + adjectives(rand);
-			break;
+				break;
+			case 3: //Rush
+				s = nouns(rand);
+				break;
+			case 4: //Young the Giant
+				s = adjectives(rand) + " the " + nouns(rand);
+				break;
+			case 5: //The Beatles
+				s = "The " + nouns(rand);
+				break;
+			case 6: //A Tribe Called Quest
+				s = "A " + nouns(rand) + " called " + nouns(rand);
+				break;
+			case 7: //Cute is what we Aim for
+				s = nouns(rand) + " is what we " + verbs(rand) + " for";
+				break;
+			case 8: //Bachman-Turner Overdrive
+				s = names(rand) + "-" + names(rand) + " " + nouns(rand);
+				break;
+			case 9: //Emerson, Lake and Palmer
+				s = names(rand) + ", " + names(rand) + " and " + names(rand);
+				break;
+			case 10: //Eating Punching (the classic)
+				s = verbs(rand) + " " + verbs(rand);
+				break;
+			case 100: //B-52s, still in beta
+				s = "";
+				break;
 		}
 		return s;
 	}
@@ -49,6 +77,7 @@ private:
 	WordList nouns;
 	WordList verbs;
 	WordList adjectives;
+	WordList names;
 
 	uniform_int_distribution<int> formats; //used for selecting the format to use
 	uniform_int_distribution<int> tailNumber; //used for bands with numbers in the name like Blink-182 or the B-52s

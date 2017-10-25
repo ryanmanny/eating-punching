@@ -11,5 +11,6 @@ using namespace std;
 #define nounFile "wordLists/91knouns.txt"
 #define verbFile "wordLists/scrubbedVerbs.txt"
 #define adjectiveFile "wordLists/28kadjectives.txt"
+#define nameFile "wordLists/firstnames.txt"
 
-#define FORMATS 2 //holds number of possible band name formats
+#define FORMATS 10 //holds number of possible band name formats
