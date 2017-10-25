@@ -32,8 +32,8 @@ public:
 			case 1: //Talking Heads
 				s = verbs(rand) + " " + nouns(rand);
 			break;
-			case 2:
-				s = "";
+			case 2: //king crimson
+				s = nouns(rand) + " " + adjectives(rand);
 			break;
 		}
 		return s;

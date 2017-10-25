@@ -36,6 +36,9 @@ public:
 	//returns a random word from the list using r random engine
 	string operator() (default_random_engine r)
 	{
-		return words.at(distribution(r));
+		string s;
+		s = words.at(distribution(r));
+		s.at(0) = toupper(s.at(0));
+		return s;
 	}
 };

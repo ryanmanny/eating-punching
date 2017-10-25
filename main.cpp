@@ -3,15 +3,22 @@
 int main(void)
 {
 	//scrubVerbs();
+	ofstream generatedNames("generatedNames.txt", ios_base::app); //opens file in append mode to keep track of full history
+	string bandName;
 
 	cout << " [x] Constructing BandGen" << endl;
 	BandGen band;
 	cout << " [x] WordLists loaded" << endl;
 
+	generatedNames << endl;
+
 	char c = '\0';
 	do {
-		cout << band() << endl;
-		cout << "Want another band name? (y/n)" << endl;
+		bandName = band();
+		cout << bandName << endl;
+		generatedNames << bandName << endl;
+
+		cout << "Want another band name? (y/n) ";
 		cin >> c;
 	} while(c == 'y' || c == 'Y');
 
