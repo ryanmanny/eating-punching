@@ -43,7 +43,8 @@ void scrubVerbs()
 		last = s.substr(s.length() - 3, 3);
 
 		//only copies strings that have "ing" within
-		if (last.find("ing") != string::npos && s.length() > 4) //figure out what the difference between string::npos and s.end() are
+		// I can't think of any 5 letter gerunds.
+		if (s.length() > 5 && last.find("ing") != string::npos) //figure out what the difference between string::npos and s.end() are
 		{
 			outfile << s << endl;
 			//cout << s << " is legit" << endl;
